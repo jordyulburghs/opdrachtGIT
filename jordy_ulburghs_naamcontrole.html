@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht | Naamcontrole</title>
+</head>
+<body>
+    <script>
+        // input controle script
+        function controle(input){
+            if (input == null) {
+                document.write("u heeft geannuleerd!");
+                return false;
+            }
+            else if (input.length == 0) {
+                document.write("u heeft niets ingegeven !");
+                return false;
+            }
+            else if (input.length <= 2) {
+                document.write("u heeft te weinig ingegeven !");
+                return false;
+            }
+            else {
+                let output = input.charAt(0).toUpperCase()+ input.slice(1)
+                return output;
+            }
+        }
+        // hoofdscript
+        let voornaam = prompt("Wat is uw voornaam?")
+        let achternaam;
+        voornaam = controle(voornaam);
+        
+            if (voornaam != false){
+                achternaam = prompt("Wat is uw achternaam?");
+            }
+            else {
+                alert("Geef eerst de voornaam in !");
+            }
+        achternaam = controle(achternaam);
+            if (achternaam != false){
+                document.write(`<p>Hey ${voornaam} ${achternaam}.</p>`)
+            }
+            else {
+                alert("Geef eerst de achternaam in !");
+            }
+    </script>
+</body>
+</html>

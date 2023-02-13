@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opdracht | Graad</title>
+</head>
+<body>
+    <script>
+        let score = prompt("Welke score heeft u op de toets? (2 cijfers)");
+        
+        if (score == null){
+            document.write("u heeft geannuleerd!")
+        }
+        else if (score.length == 0){
+            document.write("u heeft niets ingegeven !")
+        }
+        else if (isNaN(score)){
+            document.write("Dit is geen nummer!")
+        }
+        else if (score.length != 2){
+            document.write("Geef een nummer in met 2 cijfers!")
+        }
+        else{
+            if (score >= 95){
+                alert("Indien de punten groter of gelijk aan 95 zijn: De graad is: A+")
+            }
+            else if (score >= 90){
+                alert("Indien de punten groter of gelijk aan 90 zijn: De graad is: A")
+            }
+            else if (score >= 80){
+                alert("Indien de punten groter of gelijk aan 80 zijn: De graad is: B")
+            }
+            else if (score >= 70){
+                alert("Indien de punten groter of gelijk aan 70 zijn: De graad is: C")
+            }
+            else if (score >= 60){
+                alert("Indien de punten groter of gelijk aan 60 zijn: De graad is: D")
+            }
+            else if (score >= 50){
+                alert("Indien de punten groter of gelijk aan 50 zijn: De graad is: E")
+            }
+            else{
+                alert("De graad is: F")
+            };
+        };
+    </script>
+</body>
+</html>

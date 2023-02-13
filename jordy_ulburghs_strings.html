@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordy Ulburghs|Strings</title>
+</head>
+<body>
+    <script>
+        let voornaam = prompt("Wat is je voornaam?","Java");
+        let achternaam = prompt("Wat is je achternaam?","Script");
+        let naam_space = (voornaam+ ' ' +achternaam);
+        let naam_length = ((voornaam+achternaam).length);
+        document.write(`<p>Hallo ${naam_space}.</p><p>Jouw naam bevat ${naam_length} karakters.</p>`);
+        let filename = "javaScriptFrameWork";
+        document.write(`<p>De originele filename is: '${filename}'.</p>`);
+        filename = filename.toLowerCase();
+        document.write(`<p>De filename kan beter in kleine letters getypt worden, dus: '${filename}'.</p>`);
+        let filename1 = filename.substring(0,10);
+        let filename2 = filename.substring(10,20);
+        document.write(`<p>Als je '${filename}' opsplitst, krijg je : '${filename1}' en '${filename2}'.</p>`);
+        let filename_ch5 = filename.charAt(5);
+        document.write(`<p>Het zesde karakter (volgens mensen) in '${filename}' is: '${filename_ch5}'.</p>`);
+        let email = "jan.klaassen@mail.com";
+        let email_at = email.indexOf("@");
+        document.write(`<p>In '${email}' staat de @ op positie: ${email_at} .</p>`);
+        let email_name = email.substring(0,email_at);
+        document.write(`<p>De naam is dus: '${email_name}'.</p>`);
+        let tekst_sub = "Deze tekst is te lang en zal worden afgekapt op 8 tekens m.b.v. substr().";
+        let tekst_sub_8 = tekst_sub.substr(0,8);
+        document.write(`<p>De originele tekst: '${tekst_sub}' wordt dan: '${tekst_sub_8}'.</p>`);
+    </script>
+</body>
+</html>

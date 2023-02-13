@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht | Datum</title>
+</head>
+<body>
+    <script>
+        // getting local machine time
+        const d = new Date();
+        let jaar = d.getFullYear();
+        // script
+        let pensioenjaar = prompt("Wanneer ga je op pensioen?");
+        if (pensioenjaar == null){
+            document.write("u heeft geannuleerd!")
+        }
+        else if (pensioenjaar.length == 0){
+            document.write("u heeft niets ingegeven !")
+        }
+        else if (isNaN(pensioenjaar)){
+            document.write("Dit is geen nummer!")
+        }
+        else if (pensioenjaar.length != 4){
+            document.write("Geef een jaartal in met 4 cijfers!")
+        }
+        else if (pensioenjaar < jaar){
+            document.write("Ben je al op pensioen dan?")
+        }
+        else{
+            document.write(`Je gaat op pensioen binnen ${pensioenjaar-jaar} jaar`)
+        };
+    </script>
+</body>
+</html>

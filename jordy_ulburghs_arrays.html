@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opdracht Arrays | Jordy</title>
+</head>
+<body>
+    <script>
+        // Array maanden
+        let maanden = ["januari","februari","maart"];
+        let march = maanden.indexOf("march");
+        maanden[3] = "april";
+        maanden[4] = "mei";
+        maanden[5] = "juni";
+        maanden.push("juli");
+        maanden.push("augustus","september","oktober","november","december");
+        document.write(`<p>${maanden}</p>`);
+        document.write(`<p>Er zijn ${maanden.length} maanden in de array.</p>`);
+        document.write(`<p>De maand "March" bevindt zich in de array op positie: ${march}</p>`);
+        // Array namen
+        let namen = ["Erik", "Sofie", "Adam", "Zorro"];
+        namen.sort();
+        document.write(`<p>De gesorteerde namen zijn: ${namen} .</p>`);
+        let naam_zoek = prompt("kijk of wij je naam al kennen","bert");
+        document.write(`<p>De naam ${naam_zoek} bevindt zich op positie: ${namen.indexOf(naam_zoek)}</p>`);
+        let naam_gebruiker = prompt("Wat je is volledige naam (voornaam achternaam)?");
+        let array_naam_gebruiker = naam_gebruiker.split(" ");
+        array_naam_gebruiker.reverse();
+        let string_naam_gebruiker = array_naam_gebruiker.join(" ");
+        document.write(`<p>Jouw naam genoteerd als familienaam voornaam is: ${string_naam_gebruiker}</p>`);
+    </script>
+</body>
+</html>
